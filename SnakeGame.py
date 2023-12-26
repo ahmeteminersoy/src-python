@@ -10,7 +10,7 @@ L = []
 w = turtle.Screen()
 w.title("Snake Game")
 w.setup(600, 600)
-w.bgcolor("purple")
+w.bgcolor("blue")
 w.tracer(0)
 
 # snake's head
