@@ -1,1 +1,1 @@
-# MyProjects //The things that I tried by myself.
+# Python Examples that I made while learning the programming language of Python.
