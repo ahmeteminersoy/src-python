@@ -75,8 +75,6 @@ food.goto(random.randint(0, 100), 100)
 
 
 def eat():
-    global score
-    global maxScore
     if sk.distance(food) < 20:
         x = random.randint(-280, 280)
         y = random.randint(-280, 280)
@@ -88,11 +86,12 @@ def eat():
         tail.color("white")
         tail.penup()
         L.append(tail)
-
+        global score
+        global maxScore
         score += 5  
         if score > maxScore: 
             maxScore = score
-            w.title("Score: {}, The Max Score: {}".format(score, maxScore))
+        w.title("Score: {}, The Max Score: {}".format(score, maxScore))
 
     tailLength = len(L)
     for idx in range(tailLength - 1, 0, -1):
@@ -113,6 +112,7 @@ def start():
     for link in L:
         link.goto(1000, 1000)
     L.clear()
+    global score
     score = 0
     w.title("Score: {} Highest Score {}".format(score, maxScore))
 
