@@ -2,6 +2,7 @@ import turtle
 import time
 import random
 
+sleepidx = 0.1
 score = 0
 maxScore = 0
 L = []
@@ -10,7 +11,7 @@ L = []
 w = turtle.Screen()
 w.title("Snake Game")
 w.setup(600, 600)
-w.bgcolor(0.72, 0.83, 0.27)
+w.bgcolor(0.6, 0.7, 0.17)
 w.tracer(0)
 
 # snake's head
@@ -78,6 +79,8 @@ def eat():
         x = random.randint(-280, 280)
         y = random.randint(-280, 280)
         food.goto(x, y)
+        global sleepidx
+        sleepidx *= 0.96 
 
         tail = turtle.Turtle()
         tail.speed(0)
@@ -106,6 +109,8 @@ def eat():
 
 def start():
     time.sleep(0.1)
+    global sleepidx
+    sleepidx = 0.1
     sk.goto(0, 0)
     sk.direction = "stop"
     for link in L:
@@ -128,6 +133,6 @@ while True:
         if link.distance(sk) < 20:
             start()
 
-    time.sleep(0.1) 
+    time.sleep(sleepidx) 
 
 w.mainloop()
