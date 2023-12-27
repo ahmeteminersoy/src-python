@@ -10,14 +10,14 @@ L = []
 w = turtle.Screen()
 w.title("Snake Game")
 w.setup(600, 600)
-w.bgcolor("blue")
+w.bgcolor(0.72, 0.83, 0.27)
 w.tracer(0)
 
 # snake's head
 sk = turtle.Turtle()
 sk.speed(0)
 sk.shape("circle")
-sk.color("green")
+sk.color(0.2, 0.4 , 0.1)
 sk.penup()
 sk.goto(0, 0)
 
@@ -32,10 +32,10 @@ def move():
         y = sk.ycor()
         sk.sety(y - 20)
     if sk.direction == "right":
-        x = sk.xcor()  # x instead of y
+        x = sk.xcor()  
         sk.setx(x + 20)
     if sk.direction == "left":
-        x = sk.xcor()  # x instead of y
+        x = sk.xcor()  
         sk.setx(x - 20)
 
 
@@ -71,7 +71,7 @@ food.speed(0)
 food.shape("circle")
 food.color("brown")
 food.penup()
-food.goto(0, 100)
+food.goto(random.randint(0, 100), 100)
 
 
 def eat():
@@ -113,7 +113,6 @@ def start():
     for link in L:
         link.goto(1000, 1000)
     L.clear()
-    global score
     score = 0
     w.title("Score: {} Highest Score {}".format(score, maxScore))
 
