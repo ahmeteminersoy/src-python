@@ -38,7 +38,6 @@ def move():
         x = sk.xcor()  
         sk.setx(x - 20)
 
-
 def goUp():
     if sk.direction != "down":
         sk.direction = "up"
