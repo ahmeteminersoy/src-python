@@ -11,5 +11,6 @@ def multiply(*args):
         total *= x
         
     return total
+print(__name__)
 
 pi = 3.14156265

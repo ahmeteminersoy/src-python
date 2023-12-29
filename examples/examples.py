@@ -1,13 +1,5 @@
-def add(*args):
-    total = 0
-    for x in args:
-        if isinstance(x, (tuple, list,)):
-            for y in x:
-                total += y
-        else:
-            total += x
-        
-    return total
+import random
 
-result = add(1, (2, 3), (4, 5))
-print(result)
+for i in range(10):
+    result = random.gauss(0, 1)
+    print(result)
