@@ -133,6 +133,6 @@ while True:
         if link.distance(sk) < 20:
             start()
 
-    time.sleep(0.05) 
+    time.sleep(sleepidx) 
 
 w.mainloop()
