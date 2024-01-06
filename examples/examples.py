@@ -1,19 +1,4 @@
-import time
+import numpy
 
-start = time.time()
-
-a = []
-
-for i in range(10000000):
-    a.append(str(i))
-    
-stop = time.time()
-
-print(stop - start)             
-    
-start = time.time()
-
-a = [str(i) for i in range(10000000)]
-stop = time.time()
-
-print(stop - start)            
+for i in numpy.arange(0, 1.1,0.1):
+    print("{:.2}".format(i), end=" ")
