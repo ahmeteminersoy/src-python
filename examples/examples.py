@@ -1,4 +1,3 @@
-import numpy
+import os
 
-for i in numpy.arange(0, 1.1,0.1):
-    print("{:.2}".format(i), end=" ")
+print(os.getcwd())
