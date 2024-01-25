@@ -1,6 +1,11 @@
-import itertools
+import pyautogui
+import time
 
-players = ['ali', 'veli', 'selami', 'ayşe', 'fatma']
+def soltikla():
+    pyautogui.click(button='left')
+    time.sleep(0.5)
+while True:
+    for _ in range(16):
+        soltikla()
+    time.sleep(8)
 
-for player1, player2 in itertools.combinations(players, 2):
-    print(player1, '<--->', player2)
