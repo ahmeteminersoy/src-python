@@ -52,27 +52,25 @@ def move():
 def goUp():
     if sk.direction != "down":
         sk.direction = "up"
-        move()
         
 
 
 def goDown():
     if sk.direction != "up":
         sk.direction = "down"
-        move()
+
         
 
 def goRight():
     if sk.direction != "left":
         sk.direction = "right"
-        move()
+
        
 
 
 def goLeft():
     if sk.direction != "right":
         sk.direction = "left"
-        move()
         
 
 
