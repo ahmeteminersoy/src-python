@@ -24,7 +24,6 @@ sk.goto(0, 0)
 
 sk.direction = "stop"
 
-
 def move():
     if sk.direction == "up":
         y = sk.ycor()
@@ -39,24 +38,43 @@ def move():
         x = sk.xcor()  
         sk.setx(x - 20)
 
+#for snake to go 
+    if sk.xcor() > 290:
+        sk.setx(-290)
+    elif sk.xcor() < -290:
+        sk.setx(290)
+
+    if sk.ycor() > 290:
+        sk.sety(-290)
+    elif sk.ycor() < -290:
+        sk.sety(290)
+
 def goUp():
     if sk.direction != "down":
         sk.direction = "up"
+        move()
+        
 
 
 def goDown():
     if sk.direction != "up":
         sk.direction = "down"
-
+        move()
+        
 
 def goRight():
     if sk.direction != "left":
         sk.direction = "right"
+        move()
+       
 
 
 def goLeft():
     if sk.direction != "right":
         sk.direction = "left"
+        move()
+        
+
 
 
 w.listen()
@@ -126,8 +144,7 @@ while True:
     eat()
     move()
 
-    if (sk.xcor() > 290 or sk.xcor() < -290 or sk.ycor() > 290 or sk.ycor() < -290):
-        start()
+    
 
     for link in L:
         if link.distance(sk) < 20:
