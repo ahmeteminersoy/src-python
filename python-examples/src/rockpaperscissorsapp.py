@@ -1,5 +1,5 @@
 import random
-liste = ["Taş", "Kağıt", "Makas"]
+liste = ("Taş", "Kağıt", "Makas")
 idx = 0
 comp = 0
 user = 0
