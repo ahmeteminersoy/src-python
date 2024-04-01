@@ -21,22 +21,25 @@ sk.shape("circle")
 sk.color(0.2, 0.4 , 0.1)
 sk.penup()
 sk.goto(0, 0)
-
 sk.direction = "stop"
 
 def move():
     if sk.direction == "up":
         y = sk.ycor()
         sk.sety(y + 20)
+        w.listen()
     if sk.direction == "down":
         y = sk.ycor()
         sk.sety(y - 20)
+        w.listen()
     if sk.direction == "right":
         x = sk.xcor()  
         sk.setx(x + 20)
+        w.listen()
     if sk.direction == "left":
         x = sk.xcor()  
         sk.setx(x - 20)
+        w.listen()
 
 #for snake to go 
     if sk.xcor() > 290:
